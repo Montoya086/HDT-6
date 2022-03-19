@@ -66,7 +66,7 @@ public class Tienda {
 	}
 	public String show_cart_sorted() {
 		String cart_itemString="";
-		Map<String, String> inventoryMap_sorted =fInv.instanceMap(nmap);
+		Map<String, String> inventoryMap_sorted =fInv.instanceMap(2);
 		inventoryMap.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEachOrdered(x -> inventoryMap_sorted.put(x.getKey(), x.getValue()));
 		for(String i: inventoryMap_sorted.keySet()) {
 			if(cartMap.containsKey(i)) {
@@ -77,7 +77,7 @@ public class Tienda {
 	}
 	public String inv_show_sorted() {
 		String invString ="";
-		Map<String, String> inventoryMap_sorted =fInv.instanceMap(nmap);
+		Map<String, String> inventoryMap_sorted =fInv.instanceMap(2);
 		inventoryMap.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEachOrdered(x -> inventoryMap_sorted.put(x.getKey(), x.getValue()));
 		for(String i: inventoryMap_sorted.keySet()) {
 			invString+=inventoryMap_sorted.get(i)+"    "+i+"\n";
