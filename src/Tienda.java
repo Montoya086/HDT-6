@@ -1,14 +1,10 @@
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.SortedMap;
-import java.util.ArrayList;
-import java.util.List;
 /**
  * 
  */
 
 /**
- * @author Andres
+ * @author Andres Montoya
  *
  */
 public class Tienda {

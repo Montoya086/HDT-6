@@ -18,6 +18,7 @@ public class Main {
 	public static void main(String[] args) {
 		int nMap =1;
 		Scanner scan = new Scanner(System.in);
+		long time_initLong;
 		boolean bandera1 = true;
 		while(bandera1) {
 			System.out.println("Ingrese el tipo de mapa a utilizar:");
@@ -59,34 +60,46 @@ public class Main {
 				System.out.println("------------------------------------------------------------------------");
 				System.out.println("Ingrese el nombre del producto:");
 				String product = scan.nextLine();
+				time_initLong = System.currentTimeMillis();
 				tienda.cart_add(product);
+				System.out.println(System.currentTimeMillis()-time_initLong+"ms");
 				System.out.println("------------------------------------------------------------------------");
 				break;
 			case 2:
 				System.out.println("------------------------------------------------------------------------");
 				System.out.println("Ingrese el nombre del producto:");
 				product = scan.nextLine();
+				time_initLong = System.currentTimeMillis();
 				System.out.println("El producto pertenece a: "+tienda.show_category(product));
+				System.out.println(System.currentTimeMillis()-time_initLong+"ms");
 				System.out.println("------------------------------------------------------------------------");
 				break;
 			case 3:
 				System.out.println("------------------------------------------------------------------------");
+				time_initLong = System.currentTimeMillis();
 				System.out.println(tienda.show_cart_unsorted());
+				System.out.println(System.currentTimeMillis()-time_initLong+"ms");
 				System.out.println("------------------------------------------------------------------------");
 				break;
 			case 4:
 				System.out.println("------------------------------------------------------------------------");
+				time_initLong = System.currentTimeMillis();
 				System.out.println(tienda.show_cart_sorted());
+				System.out.println(System.currentTimeMillis()-time_initLong+"ms");
 				System.out.println("------------------------------------------------------------------------");
 				break;
 			case 5:
 				System.out.println("------------------------------------------------------------------------");
+				time_initLong = System.currentTimeMillis();
 				System.out.println(tienda.inv_show());
+				System.out.println(System.currentTimeMillis()-time_initLong+"ms");
 				System.out.println("------------------------------------------------------------------------");
 				break;
 			case 6:
 				System.out.println("------------------------------------------------------------------------");
+				time_initLong = System.currentTimeMillis();
 				System.out.println(tienda.inv_show_sorted());
+				System.out.println(System.currentTimeMillis()-time_initLong+"ms");
 				System.out.println("------------------------------------------------------------------------");
 				break;
 			default:
